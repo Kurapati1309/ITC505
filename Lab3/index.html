@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Font Delivery Mechanism</title>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+            body {
+                font-family: "Lobster", sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f4;
+                color: #333;
+            }
+
+            .container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+            }
+
+            header {
+                background: #333;
+                color: #fff;
+                padding-top: 30px;
+                min-height: 70px;
+                border-bottom: #bbb 1px solid;
+                font-family: "Pacifico", cursive;
+            }
+
+            header a {
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 16px;
+            }
+
+            header ul {
+                padding: 0;
+                list-style: none;
+                text-align: center;
+            }
+
+            header li {
+                display: inline;
+                margin: 0 20px;
+            }
+
+            header #branding {
+                float: left;
+            }
+
+            header #branding h1 {
+                margin: 0;
+            }
+
+            header nav {
+                float: right;
+                margin-top: 10px;
+            }
+
+            header .highlight,
+            header .current a {
+                color: #e8491d;
+                font-weight: bold;
+            }
+
+            header a:hover {
+                color: #ffffff;
+                font-weight: bold;
+            }
+
+            .content {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            code {
+                background-color: #333;
+                color: #ffffff;
+                margin: 2px;
+                padding: 5px;
+            }
+
+            div p {
+                font-family: "Pacifico", cursive; 
+            }
+            
+            h2 {
+                font-family: "Fredericka the Great", serif;
+            }
+
+            footer p {
+                font-family: "Press Start 2P", system-ui;
+            }
+
+            footer p span {
+                font-family: "VT323", monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1>Web Font Integration</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="current"><a href="./">Home</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- <div>
+            <h1>Testing Fonts</h1>
+            <h2>How to Deliver a Specific Font to a Client</h2>
+            <p>
+                This page demonstrates the method of delivering a custom font to
+                a client's browser using the @font-face rule in CSS.
+            </p> -->
+            <!-- You can add more content here explaining each step in detail -->
+        <!-- </div> -->
+
+        <div class="container">
+            <div class="content">
+                <h2>Delivering Fonts to Browsers</h2>
+                <p>This page describes the process of delivering a specific font to a client's browser from a web server. The process includes several steps to ensure that the chosen font is correctly displayed on the web page.</p>
+    
+                <h3>1. Choosing the Font</h3>
+                <p>Start by selecting the desired font. This could be a standard web font, a font from an online library, or a custom font that you have rights to use.</p>
+    
+                <h3>2. Licensing and Hosting</h3>
+                <p>Ensure you have the appropriate rights or licenses for the font. Standard web fonts are broadly supported and require no additional steps, while fonts from libraries like Google Fonts can be included via URL. Custom fonts must be hosted on your server or a CDN.</p>
+    
+                <h3>3. Including the Font in Your Website</h3>
+                <p>For custom fonts, use the CSS <code>@font-face</code> rule to define the font's name and file location. For library fonts, include a link to the font in your HTML or CSS. Example import font in CSS <code>@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");</code></p>
+    
+                <h3>4. Applying the Font</h3>
+                <p>Use the <code>font-family</code> property in your CSS to apply the font to HTML elements.</p>
+    
+                <h3>5. Compatibility and Performance</h3>
+                <p>Choose modern font formats for better compatibility and consider the impact of fonts on loading times. Techniques like font subsetting and font display strategies can help improve performance.</p>
+    
+                <h3>6. Testing</h3>
+                <p>Test your website in various browsers and devices to ensure consistent font display.</p>
+    
+                <h3>7. Accessibility and Fallbacks</h3>
+                <p>Always provide fallback font options to ensure text remains readable in case the primary font fails to load.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                Last updated:
+                <span id="lastModified"></span>
+            </p>
+        </footer>
+        <script type="text/javascript">
+            var x = document.lastModified;
+            document.getElementById("lastModified").textContent = x;
+        </script>
+    </body>
+</html>
