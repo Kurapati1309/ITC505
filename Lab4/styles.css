@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+    margin: 1em auto;
+    max-width: 50em;
+    overflow-y: scroll;
+    font-family: "Lobster", sans-serif;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bbbbbb;
+    border-radius: 10px;
+    height: 150px;
+}
+main {
+    padding: 20px;
+    border: 2px solid rebeccapurple;
+    border-radius: 15px;
+    background-color: #ccc;
+    box-shadow: 10 16px 16px rgba(0, 0, 0, 0.1);
+}
+figure {
+    text-align: center;
+}
+img {
+    max-width: 95%;
+    text-align: center;
+}
+h1 {
+    margin: 2em 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+h2 {
+    margin-top: 2em;
+    text-align: center;
+}
+div .chapter {
+    page-break-before: always;
+}
+div .section {
+    page-break-before: always;
+}
+
+p {
+    margin: 0;
+    text-indent: 1.5em;
+    text-align: justify;
+    font-family: "Pacifico", cursive;
+}
+p.head {
+    font-style: italic;
+    text-align: center;
+    text-indent: 0;
+    margin: 1em 0;
+}
+p.author {
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 2em;
+    text-align: center;
+    text-indent: 0;
+    text-transform: uppercase;
+}
+p.finis {
+    font-size: small;
+    margin-top: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Press Start 2P", system-ui;
+}
+p span {
+    background-color: #32ec1a;
+}
+hr {
+    width: 40%;
+    margin: 1em 30%;
+}
+ol {
+    font-family: "Pacifico", cursive;
+}
