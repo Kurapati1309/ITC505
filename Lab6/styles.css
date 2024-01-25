@@ -1,0 +1,138 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        "nav main aside"
+        "nav footer aside";
+    height: 100%;
+    
+    background-color: #F8F9FA;
+}
+
+header {
+    height: 70px; /* Fixed height */
+    width: 98.5%; /* Full width */
+    grid-area: header;
+    /* background-color: #f8f9fa; */
+    background-color: #b6cfe7;
+    padding: 10px;
+    background-image: url('header-image.png');
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the background image */
+    position: relative; /* Needed for the opacity layer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.4); /* White background with 0.7 opacity */
+    z-index: 1;
+}
+
+header h2 {
+    position: relative;
+    z-index: 2; /* Ensures the text appears above the opacity layer */
+}
+
+header img {
+    max-height: 100%; /* Image will scale within the header */
+    max-width: 100%; /* Prevents the image from being wider than the header */
+}
+
+nav {
+    grid-area: nav;
+    background-color: #e9ecef;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 2px;
+    width: 90%;
+    background-color: #f8f9fa;
+    height: 30px;
+    padding-left: 25px;
+    /* margin-left: 30px; */
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    font-style: italic;
+    color: black;
+}
+
+nav ul li:hover {
+    background-color: rgb(148, 129, 129);
+    cursor: pointer;
+}
+
+aside a img {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    grid-area: main;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #68f0d9;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #e9ecef;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #f8f9fa;
+    /* background-color: #bfd8f1; */
+    padding: 5px 20px;
+    text-align: center;
+}
+
+footer h3 {
+    text-align: left;
+}
+
+#addendum {
+    text-align: justify;
+}
+
+footer p span {
+    background-color: #32ec1a;
+}
+
+#temperature-converter {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#temperature-converter input, #temperature-converter select {
+    margin-right: 10px;
+    padding: 5px;
+}

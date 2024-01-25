@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Holy Grail Layout</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <!-- <img src="header-image.png" alt="Header Image"> -->
+                <h2>Temperature Converter</h2>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="tel:0913554246">Contact</a></li>
+                </ul>
+            </nav>
+            <main id="main-content">
+                <div id="temperature-converter">
+                    <!-- <h2>Temperature Converter</h2> -->
+                    <input
+                        type="number"
+                        id="temp-input"
+                        placeholder="Enter temperature"
+                    />
+                    <select id="temp-type">
+                        <option value="C">Celsius</option>
+                        <option value="F">Fahrenheit</option>
+                    </select>
+                    <button onclick="convertTemperature()">Convert</button>
+                    <p id="result"></p>
+                </div>
+            </main>
+            <aside>
+                <a
+                    href="https://www.amazon.com/dp/B085M5XQVR?ref_=amzdv_b_ucw_likenewamazondevices_certrefurb_d_pc_clk_B085M5XQVR"
+                    target="_blank"
+                >
+                    <img src="advertisement.jpg" alt="Product Ad" />
+                </a>
+            </aside>
+            <footer>
+                <h3>Addendum</h3>
+                <p id="addendum">The JavaScript function implemented solves the problem of converting temperatures between Celsius and Fahrenheit. This interactive feature allows users to input a temperature in either unit and receive the converted value in the other. The solution involved creating a simple user interface with an input field, dropdown menu for unit selection, and a conversion button. The JavaScript function calculates the conversion based on the selected unit. The main challenge was ensuring accurate conversion and presenting the results in a user-friendly format. This was resolved by implementing the correct mathematical formulas and updating the page dynamically to display the converted temperature.</p>
+                <p>Last updated: <span id="lastModified"></span></p>
+            </footer>
+        </div>
+    </body>
+</html>
